@@ -5,40 +5,42 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.erme.pe.model.Producto;
-import com.erme.pe.repository.CategoriaRepository;
+
 import com.erme.pe.repository.ProductoRepository;
 
 @Service
 public class ProductoService {
 
-    private final CategoriaRepository categoriaRepository;
-
+ 
+//INYECCION AUTOMATICO DE LOS REPOSITORIOS DE DENTRO DE SERVICE
     private final ProductoRepository productoRepository;
 	
 	
-	ProductoService(ProductoRepository productoRepository, CategoriaRepository categoriaRepository) {
+	ProductoService(ProductoRepository productoRepository) {
 		this.productoRepository = productoRepository;
-		this.categoriaRepository = categoriaRepository;
+		
 		
 	}
 	
-
+//PARA LISTAR PRODUCTO
 	
 	public List<Producto> listaProducto(){
 		return productoRepository.findAll();
 	}
-	
+	//PARA OBTENER PRODUCTO POR ID
 	public Producto obtenerProducto(Integer idProducto) {
 		return  productoRepository.findById(idProducto).orElseThrow(()-> new IllegalArgumentException("Id invalido: "+idProducto));
 	}
+	//ELIMINAR PRODUCTO
 	public void eliminarProducto(Integer idProducto) {
 		productoRepository.deleteById(idProducto);
 	}
 	
+	//CREAR Y GUARDAR NUEVO PRODUCTO
 	public void guardarProducto(Producto producto) {
 		productoRepository.save(producto);
 	}
-	
+	//BUSCA PRODUCTO POR NOMBRE
 	public List<Producto> buscar(String nombre){
 		return productoRepository.findByNombreContainingIgnoreCase(nombre);
 	}
