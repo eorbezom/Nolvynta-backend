@@ -232,14 +232,10 @@ Panel de gestión para productos, categorías, pedidos y futuras funcionalidades
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor Desarrollador
 
 **Ermenigildo Orbezo Martinez**
----
 
-## 👨‍💻 Desarrollador
-
-**Ermenigildo Orbezo Martinez**
 
 Desarrollador Full Stack enfocado en tecnologías Java, Spring Boot, PostgreSQL y desarrollo de aplicaciones web.
 
