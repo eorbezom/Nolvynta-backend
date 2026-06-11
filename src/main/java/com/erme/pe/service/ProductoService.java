@@ -29,7 +29,8 @@ public class ProductoService {
 	}
 	//PARA OBTENER PRODUCTO POR ID
 	public Producto obtenerProducto(Integer idProducto) {
-		return  productoRepository.findById(idProducto).orElseThrow(()-> new IllegalArgumentException("Id invalido: "+idProducto));
+		return  productoRepository.findById(idProducto).orElseThrow(()-> 
+		new IllegalArgumentException("Id invalido: "+idProducto));
 	}
 	//ELIMINAR PRODUCTO
 	public void eliminarProducto(Integer idProducto) {
