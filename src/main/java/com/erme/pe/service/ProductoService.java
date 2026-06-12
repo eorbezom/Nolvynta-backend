@@ -42,7 +42,7 @@ public class ProductoService {
 		productoRepository.save(producto);
 	}
 	//BUSCA PRODUCTO POR NOMBRE
-	public List<Producto> buscar(String nombre){
+	public List<Producto> buscarProducto(String nombre){
 		return productoRepository.findByNombreContainingIgnoreCase(nombre);
 	}
 

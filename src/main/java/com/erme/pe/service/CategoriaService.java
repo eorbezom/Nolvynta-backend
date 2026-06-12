@@ -39,7 +39,7 @@ public class CategoriaService {
 	}
 	
 	//METODO PARA BUSCAR POR NOMBRE
-	public List<Categoria> buscar(String nombre){
+	public List<Categoria> buscarCategoria(String nombre){
 		return categoriaRepository.findByNombreContainingIgnoreCase(nombre);
 	}
 	

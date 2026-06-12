@@ -28,7 +28,7 @@ public class PedidosService {
 		pedidosRepository.deleteById(idPedido);;
 	}
 	//GUARDAR Y CREAR PEDIDO 
-	public void grardarPedidod(Pedidos pedidos) {
+	public void grardarPedido(Pedidos pedidos) {
 		pedidosRepository.save(pedidos);
 		
 	}
