@@ -1,5 +1,6 @@
 package com.erme.pe.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.erme.pe.model.Pedidos;
 import com.erme.pe.service.PedidosService;
-
+//@CrossOrigin(origins = "https://frontend-usu-nolvynta.vercel.app/") //ENLACE CON EL FRONTEDH vercel
+@CrossOrigin(origins = "http://127.0.0.1:5500") // PARA TRABAJAR EN LOCAL
 @RestController
 @RequestMapping("/pedido")
 public class PedidoController {

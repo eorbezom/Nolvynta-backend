@@ -19,7 +19,7 @@ public class Pedidos {
 	private Integer id;
 	
 	private String nombre;
-	private String Apellidos;
+	private String apellidos;
 	private String numCliente;
 	private String direccion;
 	private String referencia;
@@ -42,7 +42,7 @@ public class Pedidos {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		Apellidos = apellidos;
+		this.apellidos = apellidos;
 		this.numCliente = numCliente;
 		this.direccion = direccion;
 		this.referencia = referencia;
@@ -52,7 +52,6 @@ public class Pedidos {
 		this.estado = estado;
 		this.fechaPedido = fechaPedido;
 	}
-	//GETTER Y SETTERS
 	public Integer getId() {
 		return id;
 	}
@@ -66,10 +65,10 @@ public class Pedidos {
 		this.nombre = nombre;
 	}
 	public String getApellidos() {
-		return Apellidos;
+		return apellidos;
 	}
 	public void setApellidos(String apellidos) {
-		Apellidos = apellidos;
+		this.apellidos = apellidos;
 	}
 	public String getNumCliente() {
 		return numCliente;
@@ -119,13 +118,13 @@ public class Pedidos {
 	public void setFechaPedido(Date fechaPedido) {
 		this.fechaPedido = fechaPedido;
 	}
-	//LECTURA EN CONSOLA
 	@Override
 	public String toString() {
-		return "Pedidos [id=" + id + ", nombre=" + nombre + ", Apellidos=" + Apellidos + ", numCliente=" + numCliente
+		return "Pedidos [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", numCliente=" + numCliente
 				+ ", direccion=" + direccion + ", referencia=" + referencia + ", producto=" + producto + ", cantidad="
 				+ cantidad + ", total=" + total + ", estado=" + estado + ", fechaPedido=" + fechaPedido + "]";
 	}
+	
 	
 
 }
